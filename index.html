@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard IDGV Sismica</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 20px; min-height: 100vh; }
+        .container { max-width: 1400px; margin: 0 auto; }
+        header { background: white; padding: 25px 30px; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        header h1 { font-size: 28px; color: #333; margin-bottom: 8px; }
+        header p { color: #666; font-size: 14px; }
+        .update-bar { display: flex; justify-content: space-between; background: white; padding: 12px 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); font-size: 13px; color: #555; }
+        .mini-legenda { background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); padding: 15px 20px; border-radius: 10px; border-left: 5px solid #ff9800; margin-bottom: 15px; font-size: 13px; line-height: 1.6; }
+        .mini-legenda strong { color: #e65100; font-weight: 600; }
+        .mini-legenda-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-top: 10px; }
+        .mini-legenda-item { background: white; padding: 10px; border-radius: 6px; border-left: 3px solid #ff9800; }
+        .mini-legenda-item strong { display: block; font-size: 12px; color: #333; margin-bottom: 4px; }
+        .mini-legenda-item span { font-size: 11px; color: #666; }
+        .color-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+        .color-badge { padding: 4px 10px; border-radius: 6px; font-size: 11px; font-weight: 600; }
+        .province-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 20px; }
+        .card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-top: 6px solid #4caf50; transition: transform 0.2s; }
+        .card:hover { transform: translateY(-4px); }
+        .card.mc { border-top-color: #388e3c; }
+        .card.pg { border-top-color: #1976d2; }
+        .card.ri { border-top-color: #c2185b; }
+        .card.aq { border-top-color: #f57c00; }
+        .card-header { font-weight: 700; font-size: 24px; margin-bottom: 18px; color: #333; display: flex; justify-content: space-between; align-items: center; }
+        .pericolosita-badge { padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600; text-transform: uppercase; }
+        .pericolosita-badge.stabile { background: #e8f5e9; color: #2e7d32; }
+        .pericolosita-badge.bassa { background: #c8e6c9; color: #2e7d32; }
+        .pericolosita-badge.media { background: #fff9c4; color: #f57f17; }
+        .pericolosita-badge.alta { background: #ffcdd2; color: #c62828; }
+        .card-stat { margin: 12px 0; font-size: 15px; display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #f0f0f0; }
+        .card-stat:last-child { border-bottom: none; }
+        .card-stat-label { color: #666; font-weight: 500; }
+        .card-stat-value { color: #333; font-weight: 600; font-size: 16px; }
+        .section { background: white; padding: 25px 30px; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .section h2 { font-size: 20px; color: #333; margin-bottom: 20px; }
+        table { width: 100%; border-collapse: collapse; font-size: 14px; }
+        th, td { text-align: left; padding: 14px 12px; border-bottom: 1px solid #e0e0e0; }
+        th { background: #f8f9fa; font-weight: 600; color: #333; text-transform: uppercase; font-size: 12px; }
+        tr:hover { background: #fafafa; }
+        .indicator-badge { display: inline-block; padding: 5px 10px; border-radius: 6px; font-size: 12px; font-weight: 600; }
+        .badge-high { background: #ffcdd2; color: #c62828; }
+        .badge-medium { background: #fff9c4; color: #f57f17; }
+        .badge-low { background: #c8e6c9; color: #2e7d32; }
+        .badge-normal { background: #e0e0e0; color: #424242; }
+        .badge-undefined { background: #f5f5f5; color: #9e9e9e; }
+        .scenario-card { margin-bottom: 15px; padding: 18px; background: #f9f9f9; border-radius: 10px; border-left: 4px solid #2196F3; }
+        .scenario-header { font-weight: 600; font-size: 16px; margin-bottom: 10px; color: #333; }
+        .scenario-item { margin-left: 15px; margin-top: 8px; font-size: 13px; color: #555; }
+        .nota-metodologica { background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); padding: 20px; border-radius: 10px; border-left: 5px solid #2196F3; font-size: 14px; color: #333; line-height: 1.6; }
+        .nota-metodologica strong { color: #1565c0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📊 Dashboard IDGV Sismica - Monitoraggio Attività</h1>
+            <p>Sistema di analisi avanzata con energia cumulativa, b-value e analog forecasting</p>
+        </header>
+        <div class="update-bar">
+            <div id="dataset-updated">⏱️ Dati aggiornati: —</div>
+            <div id="data-loaded">🔄 Dashboard caricata: —</div>
+        </div>
+        <div class="mini-legenda">
+            <strong>📖 Legenda Cards Province</strong>
+            <div class="mini-legenda-grid">
+                <div class="mini-legenda-item">
+                    <strong>🎯 Pericolosità</strong>
+                    <span>Basata sul numero di eventi negli ultimi 7 giorni</span>
+                    <div class="color-badges">
+                        <span class="color-badge" style="background: #e8f5e9; color: #2e7d32;">STABILE</span>
+                        <span class="color-badge" style="background: #c8e6c9; color: #2e7d32;">BASSA</span>
+                        <span class="color-badge" style="background: #fff9c4; color: #f57f17;">MEDIA</span>
+                        <span class="color-badge" style="background: #ffcdd2; color: #c62828;">ALTA</span>
+                    </div>
+                </div>
+                <div class="mini-legenda-item">
+                    <strong>⚡ Energia (Percentile)</strong>
+                    <span>% energia cumulativa rispetto allo storico. >80% = sequenza rara</span>
+                </div>
+                <div class="mini-legenda-item">
+                    <strong>📉 B-value</strong>
+                    <span>&lt;0.8: Stress alto | 0.8-1.2: Normale | >1.2: Molti piccoli eventi</span>
+                </div>
+            </div>
+        </div>
+        <div class="province-cards" id="cards"></div>
+        <div class="section">
+            <h2>📋 Analisi Completa Province</h2>
+            <div class="mini-legenda" style="margin-bottom:20px;">
+                <strong>📖 Interpretazione Indicatori</strong>
+                <div class="mini-legenda-grid">
+                    <div class="mini-legenda-item">
+                        <strong>📉 B-value (30gg vs storico)</strong>
+                        <span><span class="indicator-badge badge-high">ALTO</span> &lt;0.8: Stress elevato<br>
+                        <span class="indicator-badge badge-normal">NORMALE</span> 0.8-1.2: Standard<br>
+                        <strong style="color:#2e7d32;">✅↑</strong> Miglioramento | <strong style="color:#c62828;">⚠️↓</strong> Peggioramento</span>
+                    </div>
+                    <div class="mini-legenda-item">
+                        <strong>📊 Tasso Attività</strong>
+                        <span>Eventi/giorno (media 7gg):<br>
+                        <span class="indicator-badge badge-high">ALTO</span> >3.0/gg<br>
+                        <span class="indicator-badge badge-medium">MEDIO</span> 1.5-3.0/gg<br>
+                        <span class="indicator-badge badge-low">BASSO</span> &lt;1.5/gg</span>
+                    </div>
+                </div>
+            </div>
+            <table id="tabella-completa">
+                <thead>
+                    <tr>
+                        <th>Provincia</th>
+                        <th>Eventi 7gg</th>
+                        <th>Mag Max/Media</th>
+                        <th>Energia</th>
+                        <th>B-value</th>
+                        <th>Tasso</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <div class="section">
+            <h2>🔥 Ultimi 4 Eventi Registrati</h2>
+            <table id="ultimi-eventi-table">
+                <thead>
+                    <tr>
+                        <th>Data/Ora</th>
+                        <th>Provincia</th>
+                        <th>Magnitudo</th>
+                        <th>Zona</th>
+                        <th>Prof. (km)</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <div class="section">
+            <h2>📊 Percentili Storici Magnitudini</h2>
+            <div class="mini-legenda" style="margin-bottom:20px;">
+                <strong>📖 Interpretazione</strong><br>
+                <span><strong>P25</strong>: 25% eventi sotto | <strong>P50</strong>: Mediana | <strong>P75</strong>: 75% sotto | <strong>P90</strong>: Solo 10% sopra</span>
+            </div>
+            <table id="percentili-table">
+                <thead>
+                    <tr>
+                        <th>Provincia</th>
+                        <th>P25 (25%)</th>
+                        <th>P50 (Mediana)</th>
+                        <th>P75 (75%)</th>
+                        <th>P90 (90%)</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <div class="section">
+            <h2>🔮 Analisi Sequenze Storiche Simili</h2>
+            <div class="mini-legenda" style="margin-bottom:20px;">
+                <strong>📖 Analog Forecasting</strong><br>
+                <span>Confronto con sequenze passate simili. <strong style="color:#d32f2f;">M X.X</strong>: Mainshock verificatosi | 
+                <strong style="color:#388e3c;">Terminata</strong>: Sequenza senza eventi significativi</span>
+            </div>
+            <div id="scenari-container"></div>
+        </div>
+        <div class="nota-metodologica">
+            <strong>ℹ️ Nota Metodologica:</strong> Sistema di analisi con metodi scientifici validati (analog forecasting, energia cumulativa, b-value Gutenberg-Richter). Previsioni PROBABILISTICHE. B-value su ultimi 30gg vs storico. La maggior parte delle sequenze termina senza mainshock significativi.
+        </div>
+    </div>
+    <script>
+        function safeValue(v, d) { return (v === null || v === undefined) ? (d || 'n/d') : v; }
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('dashboard_data.json?v=' + Date.now())
+                .then(function(r) { return r.json(); })
+                .then(function(data) {
+                    document.getElementById('data-loaded').textContent = '🔄 Dashboard caricata: ' + new Date().toLocaleString('it-IT');
+                    document.getElementById('dataset-updated').textContent = '⏱️ Dati aggiornati: ' + (data.last_update || 'n/d');
+                    var cards = document.getElementById('cards');
+                    var tabellaBody = document.querySelector('#tabella-completa tbody');
+                    var ultimiEventiBody = document.querySelector('#ultimi-eventi-table tbody');
+                    var percentiliBody = document.querySelector('#percentili-table tbody');
+                    var scenariContainer = document.getElementById('scenari-container');
+                    var provKeys = Object.keys(data.province);
+                    for (var i = 0; i < provKeys.length; i++) {
+                        var pk = provKeys[i];
+                        var prov = data.province[pk];
+                        var card = document.createElement('div');
+                        card.className = 'card ' + pk.toLowerCase();
+                        card.innerHTML = '<div class="card-header">' + pk + '<span class="pericolosita-badge ' + prov.pericolosita.toLowerCase() + '">' + prov.pericolosita + '</span></div>' +
+                            '<div class="card-stat"><span class="card-stat-label">🔴 Eventi 7gg</span><span class="card-stat-value">' + prov.eventi_ultimi_7g + '</span></div>' +
+                            '<div class="card-stat"><span class="card-stat-label">🎯 Mag Max</span><span class="card-stat-value">' + prov.magnitudo_max_7g + '</span></div>' +
+                            '<div class="card-stat"><span class="card-stat-label">⚡ Energia</span><span class="card-stat-value">' + prov.percentile_energia + '%</span></div>' +
+                            '<div class="card-stat"><span class="card-stat-label">📉 B-value</span><span class="card-stat-value">' + safeValue(prov.b_value_storico) + '</span></div>';
+                        cards.appendChild(card);
+                        
+                        var bHtml = '';
+                        if (prov.b_value_storico !== null && prov.b_value_30gg !== null) {
+                            var arrow = prov.b_value_variazione === 'peggioramento' ? '⚠️↓' : prov.b_value_variazione === 'miglioramento' ? '✅↑' : '↔️';
+                            bHtml = '<span class="indicator-badge badge-high">' + prov.b_value_storico + '</span> storico<br>' +
+                                '<span class="indicator-badge badge-normal">' + prov.b_value_30gg + '</span> 30gg ' + arrow;
+                        } else if (prov.b_value_storico !== null) {
+                            bHtml = '<span class="indicator-badge badge-high">' + prov.b_value_storico + '</span> storico<br><small>30gg: dati insufficienti</small>';
+                        } else {
+                            bHtml = '<span class="indicator-badge badge-undefined">n/d</span>';
+                        }
+                        
+                        var tassoClass = prov.tasso_attivita > 3 ? 'badge-high' : prov.tasso_attivita > 1.5 ? 'badge-medium' : 'badge-low';
+                        
+                        var row = document.createElement('tr');
+                        row.innerHTML = '<td><strong>' + pk + '</strong></td><td>' + prov.eventi_ultimi_7g + '</td>' +
+                            '<td>' + prov.magnitudo_max_7g + ' / ' + prov.magnitudo_media + '</td>' +
+                            '<td>' + prov.percentile_energia + '%</td><td>' + bHtml + '</td>' +
+                            '<td><span class="indicator-badge ' + tassoClass + '">' + prov.tasso_attivita + '/gg</span></td>';
+                        tabellaBody.appendChild(row);
+                        
+                        var rowPerc = document.createElement('tr');
+                        rowPerc.innerHTML = '<td><strong>' + pk + '</strong></td><td>' + prov.percentili.p25 + '</td>' +
+                            '<td>' + prov.percentili.p50 + '</td><td>' + prov.percentili.p75 + '</td><td>' + prov.percentili.p90 + '</td>';
+                        percentiliBody.appendChild(rowPerc);
+                        
+                        var divScen = document.createElement('div');
+                        divScen.className = 'scenario-card';
+                        var scenHtml = '<div class="scenario-header">' + pk + ' — ' + prov.scenario_descrizione + '</div>';
+                        if (prov.scenari_simili && prov.scenari_simili.length > 0) {
+                            for (var j = 0; j < prov.scenari_simili.length; j++) {
+                                var sc = prov.scenari_simili[j];
+                                var minfo = sc.mag_max_successiva > 0 ? '→ <strong style="color:#d32f2f;">M ' + sc.mag_max_successiva + '</strong>' : '→ <span style="color:#388e3c;">Terminata</span>';
+                                scenHtml += '<div class="scenario-item">• ' + sc.periodo + ': ' + sc.eventi_precedenti + ' eventi → ' + sc.eventi_successivi + ' successivi ' + minfo + '</div>';
+                            }
+                        } else {
+                            scenHtml += '<div class="scenario-item">Nessuno scenario simile trovato nello storico</div>';
+                        }
+                        divScen.innerHTML = scenHtml;
+                        scenariContainer.appendChild(divScen);
+                    }
+                    for (var i = 0; i < data.ultimi_4_eventi.length; i++) {
+                        var ev = data.ultimi_4_eventi[i];
+                        var row = document.createElement('tr');
+                        row.innerHTML = '<td>' + ev.data_ora + '</td><td><strong>' + ev.provincia + '</strong></td>' +
+                            '<td><strong>' + ev.magnitudo + '</strong></td><td>' + ev.zona + '</td><td>' + ev.profondita_km + '</td>';
+                        ultimiEventiBody.appendChild(row);
+                    }
+                })
+                .catch(function(err) {
+                    console.error('Errore:', err);
+                    document.getElementById('cards').innerHTML = '<div style="background:white;padding:20px;color:red;">Errore: ' + err.message + '</div>';
+                });
+        });
+    </script>
+</body>
+</html>

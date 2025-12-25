@@ -1,0 +1,209 @@
+{
+  "last_update": "2025-12-24 20:28:46",
+  "finestra_ultimi_giorni": 7,
+  "mag_min_indice": 2.0,
+  "province": {
+    "MC": {
+      "name": "MC",
+      "pericolosita": "Media",
+      "eventi_ultimi_7g": 8,
+      "magnitudo_previsto": 1.8,
+      "magnitudo_max_7g": 1.8,
+      "magnitudo_media": 1.75,
+      "profondita_media": 9.8,
+      "energia_totale_joule": "1.23e+08",
+      "percentile_energia": 27,
+      "b_value": "n/d",
+      "b_value_storico": 0.54,
+      "b_value_30gg": null,
+      "b_value_variazione": null,
+      "tasso_attivita": 1.14,
+      "percentili": {
+        "p25": 1.4,
+        "p50": 1.6,
+        "p75": 2.0,
+        "p90": 2.4
+      },
+      "scenario_descrizione": "Attività bassa (8 eventi)",
+      "scenari_simili": [
+        {
+          "periodo": "1992-02-07",
+          "eventi_precedenti": 6,
+          "eventi_successivi": 1,
+          "mag_max_successiva": 2.0
+        },
+        {
+          "periodo": "2007-02-15",
+          "eventi_precedenti": 8,
+          "eventi_successivi": 10,
+          "mag_max_successiva": 1.9
+        },
+        {
+          "periodo": "2008-06-13",
+          "eventi_precedenti": 7,
+          "eventi_successivi": 5,
+          "mag_max_successiva": 2.4
+        }
+      ]
+    },
+    "PG": {
+      "name": "PG",
+      "pericolosita": "Media",
+      "eventi_ultimi_7g": 11,
+      "magnitudo_previsto": 1.8,
+      "magnitudo_max_7g": 2.0,
+      "magnitudo_media": 1.76,
+      "profondita_media": 9.7,
+      "energia_totale_joule": "2.06e+08",
+      "percentile_energia": 46,
+      "b_value": "n/d",
+      "b_value_storico": 0.54,
+      "b_value_30gg": null,
+      "b_value_variazione": null,
+      "tasso_attivita": 1.57,
+      "percentili": {
+        "p25": 1.4,
+        "p50": 1.6,
+        "p75": 2.0,
+        "p90": 2.4
+      },
+      "scenario_descrizione": "Attività media (11 eventi)",
+      "scenari_simili": [
+        {
+          "periodo": "2002-05-30",
+          "eventi_precedenti": 9,
+          "eventi_successivi": 3,
+          "mag_max_successiva": 2.2
+        },
+        {
+          "periodo": "2005-05-15",
+          "eventi_precedenti": 11,
+          "eventi_successivi": 5,
+          "mag_max_successiva": 1.9
+        },
+        {
+          "periodo": "2008-09-30",
+          "eventi_precedenti": 11,
+          "eventi_successivi": 19,
+          "mag_max_successiva": 2.7
+        }
+      ]
+    },
+    "RI": {
+      "name": "RI",
+      "pericolosita": "Bassa",
+      "eventi_ultimi_7g": 3,
+      "magnitudo_previsto": 1.7,
+      "magnitudo_max_7g": 1.7,
+      "magnitudo_media": 1.7,
+      "profondita_media": 10.9,
+      "energia_totale_joule": "3.36e+07",
+      "percentile_energia": 0,
+      "b_value": "n/d",
+      "b_value_storico": 0.58,
+      "b_value_30gg": null,
+      "b_value_variazione": null,
+      "tasso_attivita": 0.43,
+      "percentili": {
+        "p25": 1.4,
+        "p50": 1.6,
+        "p75": 1.9,
+        "p90": 2.3
+      },
+      "scenario_descrizione": "Attività bassa (3 eventi)",
+      "scenari_simili": [
+        {
+          "periodo": "1986-01-15",
+          "eventi_precedenti": 1,
+          "eventi_successivi": 0,
+          "mag_max_successiva": 0.0
+        },
+        {
+          "periodo": "1992-08-10",
+          "eventi_precedenti": 1,
+          "eventi_successivi": 0,
+          "mag_max_successiva": 0.0
+        },
+        {
+          "periodo": "2001-08-26",
+          "eventi_precedenti": 3,
+          "eventi_successivi": 3,
+          "mag_max_successiva": 2.6
+        }
+      ]
+    },
+    "AQ": {
+      "name": "AQ",
+      "pericolosita": "Bassa",
+      "eventi_ultimi_7g": 4,
+      "magnitudo_previsto": 1.8,
+      "magnitudo_max_7g": 1.9,
+      "magnitudo_media": 1.75,
+      "profondita_media": 10.5,
+      "energia_totale_joule": "9.87e+07",
+      "percentile_energia": 10,
+      "b_value": "n/d",
+      "b_value_storico": 0.54,
+      "b_value_30gg": null,
+      "b_value_variazione": null,
+      "tasso_attivita": 0.57,
+      "percentili": {
+        "p25": 1.4,
+        "p50": 1.6,
+        "p75": 1.9,
+        "p90": 2.3
+      },
+      "scenario_descrizione": "Attività bassa (4 eventi)",
+      "scenari_simili": [
+        {
+          "periodo": "1996-10-21",
+          "eventi_precedenti": 5,
+          "eventi_successivi": 0,
+          "mag_max_successiva": 0.0
+        },
+        {
+          "periodo": "2003-05-07",
+          "eventi_precedenti": 2,
+          "eventi_successivi": 1,
+          "mag_max_successiva": 2.6
+        },
+        {
+          "periodo": "2005-12-14",
+          "eventi_precedenti": 2,
+          "eventi_successivi": 3,
+          "mag_max_successiva": 1.9
+        }
+      ]
+    }
+  },
+  "ultimi_4_eventi": [
+    {
+      "data_ora": "2025-12-24 20:28",
+      "provincia": "MC",
+      "magnitudo": 1.6,
+      "zona": "6 km W Fiuminata",
+      "profondita_km": 13.4
+    },
+    {
+      "data_ora": "2025-12-24 12:41",
+      "provincia": "PG",
+      "magnitudo": 1.5,
+      "zona": "5 km E Norcia",
+      "profondita_km": 9.9
+    },
+    {
+      "data_ora": "2025-12-24 11:24",
+      "provincia": "PG",
+      "magnitudo": 1.3,
+      "zona": "7 km NE Trevi",
+      "profondita_km": 9.7
+    },
+    {
+      "data_ora": "2025-12-24 08:50",
+      "provincia": "PG",
+      "magnitudo": 1.7,
+      "zona": "1 km SE Sellano",
+      "profondita_km": 10.4
+    }
+  ]
+}
