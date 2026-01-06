@@ -1,0 +1,273 @@
+{
+  "last_update": "05 January 2026",
+  "province": [
+    {
+      "provincia": "MC",
+      "pericolosita": "ALTA",
+      "sequenza_attiva": true,
+      "eventi_7_giorni": 22,
+      "totale_eventi": 34999,
+      "magnitudo_max": 5.9,
+      "magnitudo_previsto": 2.4,
+      "magnitudo_media": 1.25,
+      "profondita_media": 24.1,
+      "tendenza": "CRESCITA",
+      "bvalue_storico": 1.18,
+      "bvalue_30gg": null,
+      "bvalue_5anni": 0.78,
+      "bvalue_3anni": 0.77,
+      "trend_bvalue": "→ Stabile",
+      "trend_spiegazione": "Attività sismica costante",
+      "giorni_bvalue": {
+        "30": null,
+        "60": 0.97,
+        "90": 0.9
+      },
+      "percentili": {
+        "p25": 1.4,
+        "p50": 1.6,
+        "p75": 2.0,
+        "p90": 2.4,
+        "p95": 2.4
+      },
+      "accuratezza": 1.18,
+      "p95": 2.4
+    },
+    {
+      "provincia": "PG",
+      "pericolosita": "ALTA",
+      "sequenza_attiva": true,
+      "eventi_7_giorni": 332,
+      "totale_eventi": 41928,
+      "magnitudo_max": 6.5,
+      "magnitudo_previsto": 2.4,
+      "magnitudo_media": 1.28,
+      "profondita_media": 11.1,
+      "tendenza": "CRESCITA",
+      "bvalue_storico": 1.11,
+      "bvalue_30gg": 0.84,
+      "bvalue_5anni": 0.78,
+      "bvalue_3anni": 0.78,
+      "trend_bvalue": "→ Stabile",
+      "trend_spiegazione": "Attività sismica costante",
+      "giorni_bvalue": {
+        "30": 0.84,
+        "60": 0.83,
+        "90": 0.82
+      },
+      "percentili": {
+        "p25": 1.4,
+        "p50": 1.6,
+        "p75": 2.0,
+        "p90": 2.4,
+        "p95": 2.4
+      },
+      "accuratezza": 1.11,
+      "p95": 2.4
+    },
+    {
+      "provincia": "RI",
+      "pericolosita": "ALTA",
+      "sequenza_attiva": true,
+      "eventi_7_giorni": 58,
+      "totale_eventi": 20600,
+      "magnitudo_max": 6.0,
+      "magnitudo_previsto": 2.3,
+      "magnitudo_media": 1.16,
+      "profondita_media": 12.2,
+      "tendenza": "CRESCITA",
+      "bvalue_storico": 1.21,
+      "bvalue_30gg": 1.24,
+      "bvalue_5anni": 0.77,
+      "bvalue_3anni": 0.83,
+      "trend_bvalue": "→ Stabile",
+      "trend_spiegazione": "Attività sismica costante",
+      "giorni_bvalue": {
+        "30": 1.24,
+        "60": 1.09,
+        "90": 0.98
+      },
+      "percentili": {
+        "p25": 1.4,
+        "p50": 1.6,
+        "p75": 1.9,
+        "p90": 2.3,
+        "p95": 2.3
+      },
+      "accuratezza": 1.21,
+      "p95": 2.3
+    },
+    {
+      "provincia": "AQ",
+      "pericolosita": "BASSA",
+      "sequenza_attiva": false,
+      "eventi_7_giorni": 5,
+      "totale_eventi": 25262,
+      "magnitudo_max": 6.1,
+      "magnitudo_previsto": 2.3,
+      "magnitudo_media": 1.24,
+      "profondita_media": 12.0,
+      "tendenza": "STABILE",
+      "bvalue_storico": 1.18,
+      "bvalue_30gg": null,
+      "bvalue_5anni": 0.71,
+      "bvalue_3anni": 0.72,
+      "trend_bvalue": "→ Stabile",
+      "trend_spiegazione": "Attività sismica costante",
+      "giorni_bvalue": {
+        "30": null,
+        "60": null,
+        "90": 0.73
+      },
+      "percentili": {
+        "p25": 1.4,
+        "p50": 1.6,
+        "p75": 1.9,
+        "p90": 2.3,
+        "p95": 2.3
+      },
+      "accuratezza": 1.18,
+      "p95": 2.3
+    }
+  ],
+  "ultimi_eventi": [
+    {
+      "data_ora": "05/01/2026 02:31",
+      "provincia": "PG",
+      "magnitudo": 3.8,
+      "zona": "2 km SE Sant'Angelo in Pontano",
+      "profondita": NaN
+    },
+    {
+      "data_ora": "02/01/2026 19:53",
+      "provincia": "PG",
+      "magnitudo": 3.5,
+      "zona": "8 km W Verghereto",
+      "profondita": NaN
+    },
+    {
+      "data_ora": "05/01/2026 02:38",
+      "provincia": "PG",
+      "magnitudo": 3.1,
+      "zona": "2 km SW Sant'Angelo in Pontano",
+      "profondita": NaN
+    },
+    {
+      "data_ora": "05/01/2026 04:15",
+      "provincia": "PG",
+      "magnitudo": 3.0,
+      "zona": "2 km E Gualdo",
+      "profondita": NaN
+    },
+    {
+      "data_ora": "05/01/2026 02:17",
+      "provincia": "PG",
+      "magnitudo": 2.7,
+      "zona": "3 km NW Penna San Giovanni",
+      "profondita": NaN
+    },
+    {
+      "data_ora": "05/01/2026 02:20",
+      "provincia": "PG",
+      "magnitudo": 2.7,
+      "zona": "2 km SE Sant'Angelo in Pontano",
+      "profondita": NaN
+    },
+    {
+      "data_ora": "05/01/2026 02:22",
+      "provincia": "PG",
+      "magnitudo": 2.7,
+      "zona": "1 km S Sant'Angelo in Pontano",
+      "profondita": NaN
+    },
+    {
+      "data_ora": "30/12/2025 04:20",
+      "provincia": "PG",
+      "magnitudo": 2.6,
+      "zona": "4 km NE Anghiari",
+      "profondita": NaN
+    },
+    {
+      "data_ora": "03/01/2026 03:38",
+      "provincia": "PG",
+      "magnitudo": 2.6,
+      "zona": "5 km NE Anghiari",
+      "profondita": NaN
+    },
+    {
+      "data_ora": "05/01/2026 08:53",
+      "provincia": "PG",
+      "magnitudo": 2.6,
+      "zona": "3 km SE Sant'Angelo in Pontano",
+      "profondita": NaN
+    }
+  ],
+  "bvalue": [
+    {
+      "provincia": "MC",
+      "bvalue_storico": 1.18,
+      "bvalue_5anni": 0.78,
+      "bvalue_3anni": 0.77,
+      "bvalue_30gg": null,
+      "trend_bvalue": "→ Stabile",
+      "trend_spiegazione": "Attività sismica costante"
+    },
+    {
+      "provincia": "PG",
+      "bvalue_storico": 1.11,
+      "bvalue_5anni": 0.78,
+      "bvalue_3anni": 0.78,
+      "bvalue_30gg": 0.84,
+      "trend_bvalue": "→ Stabile",
+      "trend_spiegazione": "Attività sismica costante"
+    },
+    {
+      "provincia": "RI",
+      "bvalue_storico": 1.21,
+      "bvalue_5anni": 0.77,
+      "bvalue_3anni": 0.83,
+      "bvalue_30gg": 1.24,
+      "trend_bvalue": "→ Stabile",
+      "trend_spiegazione": "Attività sismica costante"
+    },
+    {
+      "provincia": "AQ",
+      "bvalue_storico": 1.18,
+      "bvalue_5anni": 0.71,
+      "bvalue_3anni": 0.72,
+      "bvalue_30gg": null,
+      "trend_bvalue": "→ Stabile",
+      "trend_spiegazione": "Attività sismica costante"
+    }
+  ],
+  "percentili": [
+    {
+      "provincia": "MC",
+      "p25": 1.4,
+      "p50": 1.6,
+      "p75": 2.0,
+      "p90": 2.4
+    },
+    {
+      "provincia": "PG",
+      "p25": 1.4,
+      "p50": 1.6,
+      "p75": 2.0,
+      "p90": 2.4
+    },
+    {
+      "provincia": "RI",
+      "p25": 1.4,
+      "p50": 1.6,
+      "p75": 1.9,
+      "p90": 2.3
+    },
+    {
+      "provincia": "AQ",
+      "p25": 1.4,
+      "p50": 1.6,
+      "p75": 1.9,
+      "p90": 2.3
+    }
+  ]
+}
