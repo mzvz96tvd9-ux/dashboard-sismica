@@ -1,209 +1,273 @@
 {
-  "last_update": "2025-12-24 20:28:46",
-  "finestra_ultimi_giorni": 7,
-  "mag_min_indice": 2.0,
-  "province": {
-    "MC": {
-      "name": "MC",
-      "pericolosita": "Media",
-      "eventi_ultimi_7g": 8,
-      "magnitudo_previsto": 1.8,
-      "magnitudo_max_7g": 1.8,
-      "magnitudo_media": 1.75,
-      "profondita_media": 9.8,
-      "energia_totale_joule": "1.23e+08",
-      "percentile_energia": 27,
-      "b_value": "n/d",
-      "b_value_storico": 0.54,
-      "b_value_30gg": null,
-      "b_value_variazione": null,
-      "tasso_attivita": 1.14,
-      "percentili": {
-        "p25": 1.4,
-        "p50": 1.6,
-        "p75": 2.0,
-        "p90": 2.4
-      },
-      "scenario_descrizione": "Attività bassa (8 eventi)",
-      "scenari_simili": [
-        {
-          "periodo": "1992-02-07",
-          "eventi_precedenti": 6,
-          "eventi_successivi": 1,
-          "mag_max_successiva": 2.0
-        },
-        {
-          "periodo": "2007-02-15",
-          "eventi_precedenti": 8,
-          "eventi_successivi": 10,
-          "mag_max_successiva": 1.9
-        },
-        {
-          "periodo": "2008-06-13",
-          "eventi_precedenti": 7,
-          "eventi_successivi": 5,
-          "mag_max_successiva": 2.4
-        }
-      ]
-    },
-    "PG": {
-      "name": "PG",
-      "pericolosita": "Media",
-      "eventi_ultimi_7g": 11,
-      "magnitudo_previsto": 1.8,
-      "magnitudo_max_7g": 2.0,
-      "magnitudo_media": 1.76,
-      "profondita_media": 9.7,
-      "energia_totale_joule": "2.06e+08",
-      "percentile_energia": 46,
-      "b_value": "n/d",
-      "b_value_storico": 0.54,
-      "b_value_30gg": null,
-      "b_value_variazione": null,
-      "tasso_attivita": 1.57,
-      "percentili": {
-        "p25": 1.4,
-        "p50": 1.6,
-        "p75": 2.0,
-        "p90": 2.4
-      },
-      "scenario_descrizione": "Attività media (11 eventi)",
-      "scenari_simili": [
-        {
-          "periodo": "2002-05-30",
-          "eventi_precedenti": 9,
-          "eventi_successivi": 3,
-          "mag_max_successiva": 2.2
-        },
-        {
-          "periodo": "2005-05-15",
-          "eventi_precedenti": 11,
-          "eventi_successivi": 5,
-          "mag_max_successiva": 1.9
-        },
-        {
-          "periodo": "2008-09-30",
-          "eventi_precedenti": 11,
-          "eventi_successivi": 19,
-          "mag_max_successiva": 2.7
-        }
-      ]
-    },
-    "RI": {
-      "name": "RI",
-      "pericolosita": "Bassa",
-      "eventi_ultimi_7g": 3,
-      "magnitudo_previsto": 1.7,
-      "magnitudo_max_7g": 1.7,
-      "magnitudo_media": 1.7,
-      "profondita_media": 10.9,
-      "energia_totale_joule": "3.36e+07",
-      "percentile_energia": 0,
-      "b_value": "n/d",
-      "b_value_storico": 0.58,
-      "b_value_30gg": null,
-      "b_value_variazione": null,
-      "tasso_attivita": 0.43,
-      "percentili": {
-        "p25": 1.4,
-        "p50": 1.6,
-        "p75": 1.9,
-        "p90": 2.3
-      },
-      "scenario_descrizione": "Attività bassa (3 eventi)",
-      "scenari_simili": [
-        {
-          "periodo": "1986-01-15",
-          "eventi_precedenti": 1,
-          "eventi_successivi": 0,
-          "mag_max_successiva": 0.0
-        },
-        {
-          "periodo": "1992-08-10",
-          "eventi_precedenti": 1,
-          "eventi_successivi": 0,
-          "mag_max_successiva": 0.0
-        },
-        {
-          "periodo": "2001-08-26",
-          "eventi_precedenti": 3,
-          "eventi_successivi": 3,
-          "mag_max_successiva": 2.6
-        }
-      ]
-    },
-    "AQ": {
-      "name": "AQ",
-      "pericolosita": "Bassa",
-      "eventi_ultimi_7g": 4,
-      "magnitudo_previsto": 1.8,
-      "magnitudo_max_7g": 1.9,
-      "magnitudo_media": 1.75,
-      "profondita_media": 10.5,
-      "energia_totale_joule": "9.87e+07",
-      "percentile_energia": 10,
-      "b_value": "n/d",
-      "b_value_storico": 0.54,
-      "b_value_30gg": null,
-      "b_value_variazione": null,
-      "tasso_attivita": 0.57,
-      "percentili": {
-        "p25": 1.4,
-        "p50": 1.6,
-        "p75": 1.9,
-        "p90": 2.3
-      },
-      "scenario_descrizione": "Attività bassa (4 eventi)",
-      "scenari_simili": [
-        {
-          "periodo": "1996-10-21",
-          "eventi_precedenti": 5,
-          "eventi_successivi": 0,
-          "mag_max_successiva": 0.0
-        },
-        {
-          "periodo": "2003-05-07",
-          "eventi_precedenti": 2,
-          "eventi_successivi": 1,
-          "mag_max_successiva": 2.6
-        },
-        {
-          "periodo": "2005-12-14",
-          "eventi_precedenti": 2,
-          "eventi_successivi": 3,
-          "mag_max_successiva": 1.9
-        }
-      ]
-    }
-  },
-  "ultimi_4_eventi": [
+  "last_update": "05 January 2026",
+  "province": [
     {
-      "data_ora": "2025-12-24 20:28",
       "provincia": "MC",
-      "magnitudo": 1.6,
-      "zona": "6 km W Fiuminata",
-      "profondita_km": 13.4
+      "pericolosita": "ALTA",
+      "sequenza_attiva": true,
+      "eventi_7_giorni": 22,
+      "totale_eventi": 34999,
+      "magnitudo_max": 5.9,
+      "magnitudo_previsto": 2.4,
+      "magnitudo_media": 1.25,
+      "profondita_media": 24.1,
+      "tendenza": "CRESCITA",
+      "bvalue_storico": 1.18,
+      "bvalue_30gg": null,
+      "bvalue_5anni": 0.78,
+      "bvalue_3anni": 0.77,
+      "trend_bvalue": "→ Stabile",
+      "trend_spiegazione": "Attività sismica costante",
+      "giorni_bvalue": {
+        "30": null,
+        "60": 0.97,
+        "90": 0.9
+      },
+      "percentili": {
+        "p25": 1.4,
+        "p50": 1.6,
+        "p75": 2.0,
+        "p90": 2.4,
+        "p95": 2.4
+      },
+      "accuratezza": 1.18,
+      "p95": 2.4
     },
     {
-      "data_ora": "2025-12-24 12:41",
       "provincia": "PG",
-      "magnitudo": 1.5,
-      "zona": "5 km E Norcia",
-      "profondita_km": 9.9
+      "pericolosita": "ALTA",
+      "sequenza_attiva": true,
+      "eventi_7_giorni": 332,
+      "totale_eventi": 41928,
+      "magnitudo_max": 6.5,
+      "magnitudo_previsto": 2.4,
+      "magnitudo_media": 1.28,
+      "profondita_media": 11.1,
+      "tendenza": "CRESCITA",
+      "bvalue_storico": 1.11,
+      "bvalue_30gg": 0.84,
+      "bvalue_5anni": 0.78,
+      "bvalue_3anni": 0.78,
+      "trend_bvalue": "→ Stabile",
+      "trend_spiegazione": "Attività sismica costante",
+      "giorni_bvalue": {
+        "30": 0.84,
+        "60": 0.83,
+        "90": 0.82
+      },
+      "percentili": {
+        "p25": 1.4,
+        "p50": 1.6,
+        "p75": 2.0,
+        "p90": 2.4,
+        "p95": 2.4
+      },
+      "accuratezza": 1.11,
+      "p95": 2.4
     },
     {
-      "data_ora": "2025-12-24 11:24",
-      "provincia": "PG",
-      "magnitudo": 1.3,
-      "zona": "7 km NE Trevi",
-      "profondita_km": 9.7
+      "provincia": "RI",
+      "pericolosita": "ALTA",
+      "sequenza_attiva": true,
+      "eventi_7_giorni": 58,
+      "totale_eventi": 20600,
+      "magnitudo_max": 6.0,
+      "magnitudo_previsto": 2.3,
+      "magnitudo_media": 1.16,
+      "profondita_media": 12.2,
+      "tendenza": "CRESCITA",
+      "bvalue_storico": 1.21,
+      "bvalue_30gg": 1.24,
+      "bvalue_5anni": 0.77,
+      "bvalue_3anni": 0.83,
+      "trend_bvalue": "→ Stabile",
+      "trend_spiegazione": "Attività sismica costante",
+      "giorni_bvalue": {
+        "30": 1.24,
+        "60": 1.09,
+        "90": 0.98
+      },
+      "percentili": {
+        "p25": 1.4,
+        "p50": 1.6,
+        "p75": 1.9,
+        "p90": 2.3,
+        "p95": 2.3
+      },
+      "accuratezza": 1.21,
+      "p95": 2.3
     },
     {
-      "data_ora": "2025-12-24 08:50",
+      "provincia": "AQ",
+      "pericolosita": "BASSA",
+      "sequenza_attiva": false,
+      "eventi_7_giorni": 5,
+      "totale_eventi": 25262,
+      "magnitudo_max": 6.1,
+      "magnitudo_previsto": 2.3,
+      "magnitudo_media": 1.24,
+      "profondita_media": 12.0,
+      "tendenza": "STABILE",
+      "bvalue_storico": 1.18,
+      "bvalue_30gg": null,
+      "bvalue_5anni": 0.71,
+      "bvalue_3anni": 0.72,
+      "trend_bvalue": "→ Stabile",
+      "trend_spiegazione": "Attività sismica costante",
+      "giorni_bvalue": {
+        "30": null,
+        "60": null,
+        "90": 0.73
+      },
+      "percentili": {
+        "p25": 1.4,
+        "p50": 1.6,
+        "p75": 1.9,
+        "p90": 2.3,
+        "p95": 2.3
+      },
+      "accuratezza": 1.18,
+      "p95": 2.3
+    }
+  ],
+  "ultimi_eventi": [
+    {
+      "data_ora": "05/01/2026 02:31",
       "provincia": "PG",
-      "magnitudo": 1.7,
-      "zona": "1 km SE Sellano",
-      "profondita_km": 10.4
+      "magnitudo": 3.8,
+      "zona": "2 km SE Sant'Angelo in Pontano",
+      "profondita": NaN
+    },
+    {
+      "data_ora": "02/01/2026 19:53",
+      "provincia": "PG",
+      "magnitudo": 3.5,
+      "zona": "8 km W Verghereto",
+      "profondita": NaN
+    },
+    {
+      "data_ora": "05/01/2026 02:38",
+      "provincia": "PG",
+      "magnitudo": 3.1,
+      "zona": "2 km SW Sant'Angelo in Pontano",
+      "profondita": NaN
+    },
+    {
+      "data_ora": "05/01/2026 04:15",
+      "provincia": "PG",
+      "magnitudo": 3.0,
+      "zona": "2 km E Gualdo",
+      "profondita": NaN
+    },
+    {
+      "data_ora": "05/01/2026 02:17",
+      "provincia": "PG",
+      "magnitudo": 2.7,
+      "zona": "3 km NW Penna San Giovanni",
+      "profondita": NaN
+    },
+    {
+      "data_ora": "05/01/2026 02:20",
+      "provincia": "PG",
+      "magnitudo": 2.7,
+      "zona": "2 km SE Sant'Angelo in Pontano",
+      "profondita": NaN
+    },
+    {
+      "data_ora": "05/01/2026 02:22",
+      "provincia": "PG",
+      "magnitudo": 2.7,
+      "zona": "1 km S Sant'Angelo in Pontano",
+      "profondita": NaN
+    },
+    {
+      "data_ora": "30/12/2025 04:20",
+      "provincia": "PG",
+      "magnitudo": 2.6,
+      "zona": "4 km NE Anghiari",
+      "profondita": NaN
+    },
+    {
+      "data_ora": "03/01/2026 03:38",
+      "provincia": "PG",
+      "magnitudo": 2.6,
+      "zona": "5 km NE Anghiari",
+      "profondita": NaN
+    },
+    {
+      "data_ora": "05/01/2026 08:53",
+      "provincia": "PG",
+      "magnitudo": 2.6,
+      "zona": "3 km SE Sant'Angelo in Pontano",
+      "profondita": NaN
+    }
+  ],
+  "bvalue": [
+    {
+      "provincia": "MC",
+      "bvalue_storico": 1.18,
+      "bvalue_5anni": 0.78,
+      "bvalue_3anni": 0.77,
+      "bvalue_30gg": null,
+      "trend_bvalue": "→ Stabile",
+      "trend_spiegazione": "Attività sismica costante"
+    },
+    {
+      "provincia": "PG",
+      "bvalue_storico": 1.11,
+      "bvalue_5anni": 0.78,
+      "bvalue_3anni": 0.78,
+      "bvalue_30gg": 0.84,
+      "trend_bvalue": "→ Stabile",
+      "trend_spiegazione": "Attività sismica costante"
+    },
+    {
+      "provincia": "RI",
+      "bvalue_storico": 1.21,
+      "bvalue_5anni": 0.77,
+      "bvalue_3anni": 0.83,
+      "bvalue_30gg": 1.24,
+      "trend_bvalue": "→ Stabile",
+      "trend_spiegazione": "Attività sismica costante"
+    },
+    {
+      "provincia": "AQ",
+      "bvalue_storico": 1.18,
+      "bvalue_5anni": 0.71,
+      "bvalue_3anni": 0.72,
+      "bvalue_30gg": null,
+      "trend_bvalue": "→ Stabile",
+      "trend_spiegazione": "Attività sismica costante"
+    }
+  ],
+  "percentili": [
+    {
+      "provincia": "MC",
+      "p25": 1.4,
+      "p50": 1.6,
+      "p75": 2.0,
+      "p90": 2.4
+    },
+    {
+      "provincia": "PG",
+      "p25": 1.4,
+      "p50": 1.6,
+      "p75": 2.0,
+      "p90": 2.4
+    },
+    {
+      "provincia": "RI",
+      "p25": 1.4,
+      "p50": 1.6,
+      "p75": 1.9,
+      "p90": 2.3
+    },
+    {
+      "provincia": "AQ",
+      "p25": 1.4,
+      "p50": 1.6,
+      "p75": 1.9,
+      "p90": 2.3
     }
   ]
 }
